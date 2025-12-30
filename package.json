@@ -1,0 +1,13 @@
+{
+  "name": "com.kryzarel.rpg-items-ui",
+  "version": "0.0.0",
+  "displayName": "Kryz - RPG Items UI",
+  "description": "An example UI for the RPG Items package.",
+  "license": "MIT",
+  "author": {
+    "name": "Kryzarel"
+  },
+  "dependencies": {
+    "com.kryzarel.rpg-items": "0.0.0"
+  }
+}
