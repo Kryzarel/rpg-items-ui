@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9d942dd58e0b94997561549bb3a54e, type: 3}
+  m_Name: Gold Coin Item Definition
+  m_EditorClassIdentifier: Kryz.RPG.Items.UI::Kryz.RPG.Items.UI.CurrencyItemDefinition
+  <Icon>k__BackingField: {fileID: 7675826601332790545, guid: 47c1c9aa1d749cc4f9fa1ff368f7c1c0, type: 3}
+  <Name>k__BackingField: Gold Coin
+  <Description>k__BackingField: A simple gold coin. Used for trading all across the
+    land.
+  <MaxStacks>k__BackingField: 2147483647
