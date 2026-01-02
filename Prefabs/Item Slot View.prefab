@@ -59,7 +59,7 @@ MonoBehaviour:
   emptyColor: {r: 0, g: 0, b: 0, a: 0}
   nonEmptyColor: {r: 1, g: 1, b: 1, a: 1}
   disabledColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
-  disabledSprite: {fileID: 5251744956290624300, guid: dc7a7d8f9cb1bb2429eceace86e07cc8, type: 3}
+  disabledSprite: {fileID: 21300000, guid: dc7a7d8f9cb1bb2429eceace86e07cc8, type: 3}
 --- !u!222 &1602643392332818754
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5251744956290624300, guid: dc7a7d8f9cb1bb2429eceace86e07cc8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc7a7d8f9cb1bb2429eceace86e07cc8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
