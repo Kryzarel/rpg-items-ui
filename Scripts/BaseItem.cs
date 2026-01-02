@@ -5,7 +5,6 @@ namespace Kryz.RPG.Items.UI
 	public abstract class BaseItem : IItem
 	{
 		public IItemDefinition Definition { get; private set; }
-
 		public Sprite Icon { get; private set; }
 		public string Name { get; private set; }
 		public string Description { get; private set; }

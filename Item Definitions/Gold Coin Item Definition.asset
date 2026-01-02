@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9d942dd58e0b94997561549bb3a54e, type: 3}
   m_Name: Gold Coin Item Definition
   m_EditorClassIdentifier: Kryz.RPG.Items.UI::Kryz.RPG.Items.UI.CurrencyItemDefinition
-  <Icon>k__BackingField: {fileID: 7675826601332790545, guid: 47c1c9aa1d749cc4f9fa1ff368f7c1c0, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 47c1c9aa1d749cc4f9fa1ff368f7c1c0, type: 3}
   <Name>k__BackingField: Gold Coin
   <Description>k__BackingField: A simple gold coin. Used for trading all across the
     land.

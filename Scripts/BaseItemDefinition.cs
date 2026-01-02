@@ -10,14 +10,9 @@ namespace Kryz.RPG.Items.UI
 		public string Name { get; private set; } = string.Empty;
 		[field: SerializeField, TextArea]
 		public string Description { get; private set; } = string.Empty;
-		[field: SerializeField]
-		public int MaxStacks { get; private set; } = 1;
 
-		private void OnValidate()
-		{
-			if (MaxStacks <= 0) MaxStacks = int.MaxValue;
-		}
+		public abstract int MaxStacks { get; protected set; }
 
-		public IItem CreateWith(IItemFactory factory) => factory.GetOrCreate(this);
+		public abstract IItem CreateWith(IItemFactory factory);
 	}
 }

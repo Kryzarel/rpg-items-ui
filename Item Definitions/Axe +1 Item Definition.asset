@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93fb6410809da31469b6719cc96d2511, type: 3}
-  m_Name: Axe Item Definition
+  m_Name: Axe +1 Item Definition
   m_EditorClassIdentifier: Kryz.RPG.Items.UI::Kryz.RPG.Items.UI.EquipableItemDefinition
-  <Icon>k__BackingField: {fileID: 6674386295937086461, guid: f5f8f187936bac046a74863efade55ba, type: 3}
-  <Name>k__BackingField: Axe
-  <Description>k__BackingField: 
+  <Icon>k__BackingField: {fileID: 21300000, guid: 4d693622802e9a34f99c8e40b12be60a, type: 3}
+  <Name>k__BackingField: Axe +1
+  <Description>k__BackingField: An upgraded iron axe. Chop trees or heads, the choice
+    is yours.
   <MaxStacks>k__BackingField: 1

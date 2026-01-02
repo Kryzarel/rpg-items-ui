@@ -55,7 +55,7 @@ MonoBehaviour:
   raycastImage: {fileID: 8813237890542446552}
   itemImage: {fileID: 6643015008062899162}
   text: {fileID: 6629927613360203921}
-  textFormatString: 
+  textFormatString: '{0}'
   emptyColor: {r: 0, g: 0, b: 0, a: 0}
   nonEmptyColor: {r: 1, g: 1, b: 1, a: 1}
   disabledColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
