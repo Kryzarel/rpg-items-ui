@@ -1360,7 +1360,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b7bab90ac2608ab46a5977bceed7a4e0, type: 2}
   - {fileID: 11400000, guid: b5cf1626b4f061b4283627aa667cdad4, type: 2}
   - {fileID: 11400000, guid: e733ba96913c5834f9fef5bb60bcbf27, type: 2}
-  itemCounts: 320000000100000001000000010000000100000001000000010000000100000001000000
+  - {fileID: 11400000, guid: 41e4bd45bea29064e84c614f6f2b0b1a, type: 2}
+  itemCounts: 3200000001000000010000000100000001000000010000000100000001000000010000000a000000
 --- !u!1001 &1211717590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2922,7 +2923,7 @@ MonoBehaviour:
   - {fileID: 1142858100}
   - {fileID: 1102829865}
   itemSlotInput:
-    unityObject: {fileID: 0}
+    unityObject: {fileID: 22392043}
   minSlots: 18
   maxSlots: 18
 --- !u!1 &2078026703
