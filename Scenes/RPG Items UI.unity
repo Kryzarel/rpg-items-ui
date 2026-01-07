@@ -225,6 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 22392042}
+  - component: {fileID: 22392043}
   m_Layer: 5
   m_Name: Character Panel
   m_TagString: Untagged
@@ -253,6 +254,27 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: 0}
   m_SizeDelta: {x: 1208, y: 1630}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &22392043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22392041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38adcf52dd4450143ad168df75d1983c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Kryz.RPG.Items.Views::Kryz.RPG.Items.Views.ItemSlotInteraction
+  itemTooltip:
+    unityObject: {fileID: 0}
+  dragManager:
+    unityObject: {fileID: 73720769}
+  actionAsset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
+  pickUpAction: {fileID: 1823134910}
+  cancelPickUpAction: {fileID: 822263506}
+  useAction: {fileID: 307225343}
+  splitStackAction: {fileID: 1005981421}
 --- !u!1 &73720767
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +568,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
+--- !u!114 &307225343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Inventory/Use
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
+  m_ActionId: ffada4c7-a036-4de3-9000-fb75651f278d
 --- !u!224 &595579581 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7057724750947131848, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
@@ -675,6 +711,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
+--- !u!114 &822263506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Inventory/Cancel Pick Up
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
+  m_ActionId: 929eb8d4-fc8c-4563-abb9-60362269ae7d
 --- !u!1001 &862289337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1177,6 +1227,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1005981421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Inventory/Split Stack
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
+  m_ActionId: db9d5683-e6b0-45fb-a9d8-2a3df1d349a9
 --- !u!224 &1050491280 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7057724750947131848, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
@@ -1225,20 +1289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a52128e5e403b4a80c9ee0312a78ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1105542646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: Inventory/Use
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
-  m_ActionId: ffada4c7-a036-4de3-9000-fb75651f278d
 --- !u!224 &1142858097 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7057724750947131848, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
@@ -1618,20 +1668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a52128e5e403b4a80c9ee0312a78ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1345133033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: Inventory/Split Stack
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
-  m_ActionId: db9d5683-e6b0-45fb-a9d8-2a3df1d349a9
 --- !u!224 &1393176348 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7057724750947131848, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
@@ -2266,6 +2302,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a52128e5e403b4a80c9ee0312a78ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1823134910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Inventory/Pick Up
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
+  m_ActionId: f599e9fc-7362-473a-9558-5b62492534de
 --- !u!1001 &1862939682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2773,7 +2823,6 @@ GameObject:
   - component: {fileID: 2042752750}
   - component: {fileID: 2042752749}
   - component: {fileID: 2042752751}
-  - component: {fileID: 2042752752}
   m_Layer: 5
   m_Name: Inventory Panel
   m_TagString: Untagged
@@ -2873,27 +2922,9 @@ MonoBehaviour:
   - {fileID: 1142858100}
   - {fileID: 1102829865}
   itemSlotInput:
-    unityObject: {fileID: 2042752752}
+    unityObject: {fileID: 22392043}
   minSlots: 18
   maxSlots: 18
---- !u!114 &2042752752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042752747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38adcf52dd4450143ad168df75d1983c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Kryz.RPG.Items.Views::Kryz.RPG.Items.Views.ItemSlotInteraction
-  itemTooltip:
-    unityObject: {fileID: 0}
-  dragManager:
-    unityObject: {fileID: 73720769}
-  useInputAction: {fileID: 1105542646}
-  splitStackInputAction: {fileID: 1345133033}
 --- !u!1 &2078026703
 GameObject:
   m_ObjectHideFlags: 0

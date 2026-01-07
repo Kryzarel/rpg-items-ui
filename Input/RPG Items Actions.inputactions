@@ -7,6 +7,24 @@
             "id": "c73a5639-7f75-41e7-a9eb-9af071b0f515",
             "actions": [
                 {
+                    "name": "Pick Up",
+                    "type": "Button",
+                    "id": "f599e9fc-7362-473a-9558-5b62492534de",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cancel Pick Up",
+                    "type": "Button",
+                    "id": "929eb8d4-fc8c-4563-abb9-60362269ae7d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Use",
                     "type": "Button",
                     "id": "ffada4c7-a036-4de3-9000-fb75651f278d",
@@ -49,8 +67,41 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "4fb165cb-9f1f-4f0e-9766-f3021389f442",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "747d0c89-df9e-4a46-8da9-fc65730b6af8",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel Pick Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8391ad6e-8b07-4ab9-8fa4-0e9b465aac03",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel Pick Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "One Modifier",
-                    "id": "dcd0de78-5477-4437-bece-ce6ae9ec9e76",
+                    "id": "8326a32e-7ed4-40b7-8d8d-0457716cfb3e",
                     "path": "OneModifier",
                     "interactions": "Press(behavior=1)",
                     "processors": "",
@@ -61,7 +112,7 @@
                 },
                 {
                     "name": "modifier",
-                    "id": "28317118-0efa-4f27-9f95-4dc088d64bce",
+                    "id": "13f464a1-844f-424c-bda0-cbbb68f31c04",
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
@@ -72,7 +123,7 @@
                 },
                 {
                     "name": "binding",
-                    "id": "29ad3c6b-730e-463a-8289-03ebb15dc41f",
+                    "id": "2e799b24-bbd2-4782-82bd-30843bb22ff0",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
