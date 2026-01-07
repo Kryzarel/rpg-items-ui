@@ -2922,7 +2922,7 @@ MonoBehaviour:
   - {fileID: 1142858100}
   - {fileID: 1102829865}
   itemSlotInput:
-    unityObject: {fileID: 22392043}
+    unityObject: {fileID: 0}
   minSlots: 18
   maxSlots: 18
 --- !u!1 &2078026703
