@@ -16,4 +16,4 @@ MonoBehaviour:
   <Name>k__BackingField: Gold Coin
   <Description>k__BackingField: A simple gold coin. Used for trading all across the
     land.
-  <MaxStacks>k__BackingField: 2147483647
+  <MaxStacks>k__BackingField: 60
