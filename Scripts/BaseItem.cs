@@ -2,13 +2,14 @@ using UnityEngine;
 
 namespace Kryz.RPG.Items.UI
 {
-	public abstract class BaseItem : IItem
+	public abstract class BaseItem : IItem, IItemIcon
 	{
-		public IItemDefinition Definition { get; private set; }
+		public BaseItemDefinition Definition { get; private set; }
 		public Sprite Icon { get; private set; }
 		public string Name { get; private set; }
 		public string Description { get; private set; }
-		public int MaxStacks { get; private set; }
+
+		IItemDefinition IItem.Definition => Definition;
 
 		public BaseItem(BaseItemDefinition definition)
 		{
@@ -16,7 +17,6 @@ namespace Kryz.RPG.Items.UI
 			Icon = definition.Icon!;
 			Name = definition.Name;
 			Description = definition.Description;
-			MaxStacks = definition.MaxStacks;
 		}
 
 		public virtual int CompareTo(IItem other) => Name.CompareTo(other.Name);
