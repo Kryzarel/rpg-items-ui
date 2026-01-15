@@ -6,7 +6,7 @@ namespace Kryz.RPG.Items.UI
 	public class CurrencyItemDefinition : BaseItemDefinition, IItemDefinition
 	{
 		[field: SerializeField]
-		public int MaxStacks { get; protected set; }
+		public int MaxStacks { get; private set; }
 
 		private void OnValidate()
 		{

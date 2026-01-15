@@ -2,7 +2,7 @@ namespace Kryz.RPG.Items.UI
 {
 	public class CurrencyItem : BaseItem
 	{
-		public new CurrencyItemDefinition Definition { get; private set; }
+		public new readonly CurrencyItemDefinition Definition;
 		public override int MaxStacks => Definition.MaxStacks;
 
 		public CurrencyItem(CurrencyItemDefinition definition) : base(definition)
