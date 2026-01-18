@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Kryz.RPG.Items.Views::Kryz.RPG.Items.Views.ItemDragManager
   canvas: {fileID: 1003012368}
-  dragSlot: {fileID: 1871925441}
+  cursorSlot: {fileID: 1871925441}
 --- !u!114 &73720770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2371,6 +2371,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Slot View
       objectReference: {fileID: 0}
+    - target: {fileID: 6534269239111914274, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534269239111914274, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643015008062899162, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d9627668ab0d53742bd84cda88bc0c03, type: 3}
     - target: {fileID: 7057724750947131848, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
