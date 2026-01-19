@@ -39,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512588435662629935
 MonoBehaviour:
@@ -56,6 +56,7 @@ MonoBehaviour:
   raycastImage: {fileID: 8813237890542446552}
   itemImage: {fileID: 6643015008062899162}
   text: {fileID: 6629927613360203921}
+  selectable: {fileID: 6534269239111914274}
   textFormatString: '{0}'
   emptyColor: {r: 0, g: 0, b: 0, a: 0}
   nonEmptyColor: {r: 1, g: 1, b: 1, a: 1}
@@ -139,7 +140,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 8813237890542446552}
 --- !u!1 &4706415502165000039
 GameObject:
