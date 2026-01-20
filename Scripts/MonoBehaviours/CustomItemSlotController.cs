@@ -67,13 +67,12 @@ namespace Kryz.RPG.Items.UI
 				return false;
 			}
 
-			IItemSlotView? dragSlot = dragController.CursorSlot;
-			ItemStack dragBefore = dragSlot?.ItemStack ?? default;
+			ItemStack dragBefore = dragController.CursorSlot?.ItemStack ?? default;
 			ItemStack dropBefore = itemSlotView.ItemStack;
 
 			if (TryDrop(itemSlotView))
 			{
-				ItemStack dragAfter = dragSlot?.ItemStack ?? default;
+				ItemStack dragAfter = dragController.CursorSlot?.ItemStack ?? default;
 				ItemStack dropAfter = itemSlotView.ItemStack;
 				bool notEmpty = dragBefore != default && dragAfter != default;
 				bool swapped = notEmpty && dragBefore == dropAfter && dropBefore == dragAfter;
