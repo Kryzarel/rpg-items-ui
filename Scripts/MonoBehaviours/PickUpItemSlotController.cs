@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace Kryz.RPG.Items.UI
 {
-	public sealed class CustomItemSlotController : ItemSlotController
+	public sealed class PickUpItemSlotController : ItemSlotController
 	{
 		[SerializeField] InputActionReference? pickUpAction;
 		[SerializeField] InputActionReference? cancelPickUpAction;
