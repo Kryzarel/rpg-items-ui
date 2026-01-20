@@ -4,7 +4,7 @@
     "references": [
         "Kryz.RPG.Items",
         "Kryz.RPG.Items.Views",
-        "Kryz.UnityUtils"
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

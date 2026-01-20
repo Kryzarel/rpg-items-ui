@@ -321,7 +321,7 @@ MonoBehaviour:
   itemSlotsParent: {fileID: 73720768}
   itemSlots:
   - {fileID: 1871925441}
-  itemSlotController: {fileID: 1200969943}
+  itemSlotController: {fileID: 0}
   minSlots: 1
   maxSlots: 1
 --- !u!224 &129283399 stripped
@@ -566,20 +566,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
---- !u!114 &307225343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: Inventory/Use
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
-  m_ActionId: ffada4c7-a036-4de3-9000-fb75651f278d
 --- !u!224 &595579581 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7057724750947131848, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
@@ -1212,20 +1198,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1005981421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: Inventory/Split Stack
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
-  m_ActionId: db9d5683-e6b0-45fb-a9d8-2a3df1d349a9
 --- !u!224 &1050491280 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7057724750947131848, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
@@ -1393,13 +1365,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1200969941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38adcf52dd4450143ad168df75d1983c, type: 3}
+  m_Script: {fileID: 11500000, guid: 37b79262ae56d9d46838186e9432c866, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Kryz.RPG.Items.Views::Kryz.RPG.Items.Views.ItemSlotInteraction
-  dragController:
-    unityObject: {fileID: 73720769}
-  useAction: {fileID: 307225343}
-  splitStackAction: {fileID: 1005981421}
+  m_EditorClassIdentifier: Kryz.RPG.Items.UI::Kryz.RPG.Items.UI.CustomItemSlotController
+  dragController: {fileID: 73720769}
+  useAction: {fileID: 2023140130}
+  splitStackAction: {fileID: 1413020331}
+  pickUpAction: {fileID: 1909668622}
+  cancelPickUpAction: {fileID: 2080893632}
 --- !u!1001 &1211717590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1723,6 +1696,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a52128e5e403b4a80c9ee0312a78ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1413020331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Inventory/Split Stack
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
+  m_ActionId: db9d5683-e6b0-45fb-a9d8-2a3df1d349a9
 --- !u!1001 &1502749279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2450,6 +2437,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a52128e5e403b4a80c9ee0312a78ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1909668622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Inventory/Pick Up
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
+  m_ActionId: f599e9fc-7362-473a-9558-5b62492534de
 --- !u!224 &1983390660 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7057724750947131848, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
@@ -2676,6 +2677,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
+--- !u!114 &2023140130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Inventory/Use
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
+  m_ActionId: ffada4c7-a036-4de3-9000-fb75651f278d
 --- !u!1001 &2027023016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3053,6 +3068,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2080893632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Inventory/Cancel Pick Up
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
+  m_ActionId: 929eb8d4-fc8c-4563-abb9-60362269ae7d
 --- !u!224 &2105597682 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7057724750947131848, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
