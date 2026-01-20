@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 73720769}
   - component: {fileID: 73720770}
   m_Layer: 5
-  m_Name: Item Slot Drag Manager
+  m_Name: Item Slot Drag Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,8 +321,7 @@ MonoBehaviour:
   itemSlotsParent: {fileID: 73720768}
   itemSlots:
   - {fileID: 1871925441}
-  itemSlotInput:
-    unityObject: {fileID: 0}
+  itemSlotController: {fileID: 1200969943}
   minSlots: 1
   maxSlots: 1
 --- !u!224 &129283399 stripped
@@ -710,20 +709,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3af7c7d88c12eb945bc1de9340daab4e, type: 3}
---- !u!114 &822263506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: Inventory/Cancel Pick Up
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
-  m_ActionId: 929eb8d4-fc8c-4563-abb9-60362269ae7d
 --- !u!1001 &862289337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1217,8 +1202,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1200969942}
   - {fileID: 22392042}
+  - {fileID: 1200969942}
   - {fileID: 73720768}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1374,7 +1359,7 @@ GameObject:
   - component: {fileID: 1200969942}
   - component: {fileID: 1200969943}
   m_Layer: 5
-  m_Name: Item Slot Input
+  m_Name: Item Slot Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1411,13 +1396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38adcf52dd4450143ad168df75d1983c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Kryz.RPG.Items.Views::Kryz.RPG.Items.Views.ItemSlotInteraction
-  itemTooltip:
-    unityObject: {fileID: 0}
-  dragManager:
+  dragController:
     unityObject: {fileID: 73720769}
-  actionAsset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
-  pickUpAction: {fileID: 1823134910}
-  cancelPickUpAction: {fileID: 822263506}
   useAction: {fileID: 307225343}
   splitStackAction: {fileID: 1005981421}
 --- !u!1001 &1211717590
@@ -2244,20 +2224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a52128e5e403b4a80c9ee0312a78ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1823134910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: Inventory/Pick Up
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: f39a6ff6cd673a549a8a520fb9b6a8df, type: 3}
-  m_ActionId: f599e9fc-7362-473a-9558-5b62492534de
 --- !u!1001 &1862939682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2992,8 +2958,7 @@ MonoBehaviour:
   - {fileID: 595579584}
   - {fileID: 1142858100}
   - {fileID: 1102829865}
-  itemSlotInput:
-    unityObject: {fileID: 1200969943}
+  itemSlotController: {fileID: 1200969943}
   minSlots: 18
   maxSlots: 18
 --- !u!1 &2078026703
