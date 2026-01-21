@@ -4,12 +4,13 @@ using UnityEngine;
 namespace Kryz.RPG.Items.UI
 {
 	[Serializable]
-	public class EquipableItemSaveData : IItemSaveData
+	public class EquipableItemSaveData : BaseItemSaveData
 	{
-		[field: SerializeField]
-		public string DefinitionId { get; set; } = string.Empty;
-
 		[SerializeField]
 		public float[] Floats = Array.Empty<float>();
+
+		public EquipableItemSaveData(string definitionId) : base(definitionId)
+		{
+		}
 	}
 }

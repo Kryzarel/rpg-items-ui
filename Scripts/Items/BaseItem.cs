@@ -19,5 +19,7 @@ namespace Kryz.RPG.Items.UI
 		}
 
 		public virtual int CompareTo(IItem other) => Name.CompareTo(other.Name);
+
+		public abstract IItemSaveData ToSaveData();
 	}
 }

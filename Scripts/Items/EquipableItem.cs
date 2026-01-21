@@ -12,5 +12,7 @@ namespace Kryz.RPG.Items.UI
 		public EquipableItem(EquipableItemDefinition definition, EquipableItemSaveData saveData) : this(definition)
 		{
 		}
+
+		public override IItemSaveData ToSaveData() => new EquipableItemSaveData(Definition.Id);
 	}
 }
