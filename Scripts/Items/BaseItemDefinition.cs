@@ -12,7 +12,5 @@ namespace Kryz.RPG.Items.UI
 		public string Name { get; private set; } = string.Empty;
 		[field: SerializeField, TextArea]
 		public string Description { get; private set; } = string.Empty;
-
-		public abstract IItem CreateWith(IItemFactory factory);
 	}
 }

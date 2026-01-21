@@ -9,7 +9,5 @@ namespace Kryz.RPG.Items.UI
 		[Space]
 		[SerializeField]
 		private float[] statBonuses = Array.Empty<float>();
-
-		public override IItem CreateWith(IItemFactory factory) => factory.GetOrCreate(this);
 	}
 }

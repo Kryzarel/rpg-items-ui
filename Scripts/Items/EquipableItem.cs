@@ -8,5 +8,9 @@ namespace Kryz.RPG.Items.UI
 		{
 			Definition = definition;
 		}
+
+		public EquipableItem(EquipableItemDefinition definition, EquipableItemSaveData saveData) : this(definition)
+		{
+		}
 	}
 }

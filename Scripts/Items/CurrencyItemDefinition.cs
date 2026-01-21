@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Kryz.RPG.Items.UI
@@ -12,7 +13,5 @@ namespace Kryz.RPG.Items.UI
 		{
 			if (MaxStacks < 0) MaxStacks = int.MaxValue;
 		}
-
-		public override IItem CreateWith(IItemFactory factory) => factory.GetOrCreate(this);
 	}
 }

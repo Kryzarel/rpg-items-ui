@@ -6,7 +6,7 @@ namespace Kryz.RPG.Items.UI
 {
 	public class Initializer : MonoBehaviour
 	{
-		private readonly ItemFactory itemFactory = new();
+		private readonly ItemFactory itemFactory = new(null!);
 		private readonly Inventory inventory = new(12);
 		private readonly Inventory cursorInventory = new(1);
 
@@ -42,7 +42,7 @@ namespace Kryz.RPG.Items.UI
 
 			for (int i = 0; i < itemDefinitions.Length; i++)
 			{
-				inventory.TrySwap(i, new ItemStack(itemDefinitions[i].CreateWith(itemFactory), itemCounts[i]), out _);
+				inventory.TrySwap(i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]), out _);
 			}
 		}
 	}
