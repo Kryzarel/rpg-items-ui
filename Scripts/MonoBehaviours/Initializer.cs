@@ -6,7 +6,7 @@ namespace Kryz.RPG.Items.UI
 {
 	public class Initializer : MonoBehaviour
 	{
-		private readonly ItemFactory itemFactory = new(null!);
+		private readonly ItemFactory itemFactory = new(new ItemDefinitionDatabaseResources());
 		private readonly Inventory inventory = new(12);
 		private readonly Inventory cursorInventory = new(1);
 
@@ -18,6 +18,10 @@ namespace Kryz.RPG.Items.UI
 		private BaseItemDefinition[] itemDefinitions = Array.Empty<BaseItemDefinition>();
 		[SerializeField]
 		private int[] itemCounts = Array.Empty<int>();
+		[SerializeField]
+		private InventorySaveData inventorySaveData = new();
+		[SerializeField]
+		private string saveDataJson = string.Empty;
 
 		private void OnValidate()
 		{
@@ -40,10 +44,24 @@ namespace Kryz.RPG.Items.UI
 			inventoryView!.SetInventory(inventory);
 			cursorInventoryView!.SetInventory(cursorInventory);
 
-			for (int i = 0; i < itemDefinitions.Length; i++)
+			if (string.IsNullOrEmpty(saveDataJson))
 			{
-				inventory.TrySwap(i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]), out _);
+				for (int i = 0; i < itemDefinitions.Length; i++)
+				{
+					inventory.TrySwap(i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]), out _);
+				}
 			}
+			else
+			{
+				inventorySaveData.FromJson(saveDataJson);
+				inventorySaveData.ToInventory(itemFactory, inventory);
+			}
+		}
+
+		private void OnDisable()
+		{
+			inventorySaveData.FromItems(inventory.AsSpan());
+			Debug.Log(inventorySaveData.ToJson());
 		}
 	}
 }

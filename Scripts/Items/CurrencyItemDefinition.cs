@@ -9,8 +9,9 @@ namespace Kryz.RPG.Items.UI
 		[field: SerializeField]
 		public int MaxStacks { get; private set; }
 
-		private void OnValidate()
+		protected override void OnValidate()
 		{
+			base.OnValidate();
 			if (MaxStacks < 0) MaxStacks = int.MaxValue;
 		}
 	}
