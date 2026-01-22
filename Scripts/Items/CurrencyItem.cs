@@ -10,6 +10,6 @@ namespace Kryz.RPG.Items.UI
 			Definition = definition;
 		}
 
-		public override IItemSaveData ToSaveData() => new SingletonItemSaveData(Definition.Id);
+		public override IItemSaveData ToSaveData() => new ItemSaveDataSingleton(Definition.Id);
 	}
 }

@@ -1,6 +1,6 @@
 namespace Kryz.RPG.Items.UI
 {
-	public sealed class EquipableItemCreator : ItemCreator<EquipableItemDefinition, EquipableItemSaveData>
+	public sealed class EquipableItemCreator : ItemCreatorBase<EquipableItemDefinition, EquipableItemSaveData>
 	{
 		public override IItem Create(EquipableItemDefinition definition)
 		{

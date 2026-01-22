@@ -1,6 +1,6 @@
 namespace Kryz.RPG.Items.UI
 {
-	public class CurrencyItemCreator : SingletonItemCreator<CurrencyItemDefinition>
+	public class CurrencyItemCreator : ItemCreatorSingleton<CurrencyItemDefinition>
 	{
 		public override IItem Create(CurrencyItemDefinition definition)
 		{
