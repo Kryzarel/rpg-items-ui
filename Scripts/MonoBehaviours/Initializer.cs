@@ -53,7 +53,7 @@ namespace Kryz.RPG.Items.UI
 			}
 			else
 			{
-				inventorySaveData.FromJson(saveDataJson);
+				JsonUtility.FromJsonOverwrite(saveDataJson, inventorySaveData);
 				inventorySaveData.ToInventory(itemFactory, inventory);
 			}
 		}
@@ -61,7 +61,7 @@ namespace Kryz.RPG.Items.UI
 		private void OnDisable()
 		{
 			inventorySaveData.FromItems(itemFactory, inventory.AsSpan());
-			Debug.Log(inventorySaveData.ToJson());
+			Debug.Log(JsonUtility.ToJson(inventorySaveData));
 		}
 	}
 }
