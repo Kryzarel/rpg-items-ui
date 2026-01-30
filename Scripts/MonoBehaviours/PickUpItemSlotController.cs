@@ -56,6 +56,10 @@ namespace Kryz.RPG.Items.UI
 			{
 				return true;
 			}
+			else if (splitStackAction != null && splitStackAction.action.WasPerformedThisFrame())
+			{
+				return StartDrag(itemSlotView, itemSlotView.ItemStack.Count / 2);
+			}
 
 			return base.OnPointerClick(itemSlotView, eventData);
 		}
