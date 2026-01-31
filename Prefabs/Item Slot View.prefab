@@ -58,10 +58,11 @@ MonoBehaviour:
   text: {fileID: 6629927613360203921}
   selectable: {fileID: 6534269239111914274}
   textFormatString: '{0}'
+  emptySprite: {fileID: 0}
   emptyColor: {r: 0, g: 0, b: 0, a: 0}
   nonEmptyColor: {r: 1, g: 1, b: 1, a: 1}
-  disabledColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
-  disabledSprite: {fileID: 21300000, guid: dc7a7d8f9cb1bb2429eceace86e07cc8, type: 3}
+  unboundSprite: {fileID: 21300000, guid: dc7a7d8f9cb1bb2429eceace86e07cc8, type: 3}
+  unboundColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
 --- !u!222 &1602643392332818754
 CanvasRenderer:
   m_ObjectHideFlags: 0
