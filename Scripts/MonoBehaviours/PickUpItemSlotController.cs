@@ -64,6 +64,23 @@ namespace Kryz.RPG.Items.UI
 			return base.OnPointerClick(itemSlotView, eventData);
 		}
 
+		protected override bool TryDrop(IItemSlotView itemSlotView)
+		{
+			if (!ValidateSlot(itemSlotView, out int dropIndex, out IInventory? dropInventory))
+				return false;
+
+			if (dragController == null || dragController.CursorSlot == null /* || dragController.SourceSlot == null */)
+				return false;
+
+			if (!ValidateSlot(dragController.CursorSlot, out int cursorIndex, out IInventory? cursorInventory))
+				return false;
+
+			// if (!ValidateSlot(dragController.SourceSlot, out int sourceIndex, out IInventory? sourceInventory))
+			// 	return false;
+
+			return dropInventory.TryMove(dropIndex, cursorInventory, cursorIndex, allowSwap: true);
+		}
+
 		private bool HandleItemPickup(IItemSlotView itemSlotView)
 		{
 			if (dragController == null || pickUpAction == null || !pickUpAction.action.WasPerformedThisFrame())
