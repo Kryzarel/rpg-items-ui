@@ -19,7 +19,7 @@ namespace Kryz.RPG.Items.UI
 		[SerializeField]
 		private int[] itemCounts = Array.Empty<int>();
 		[SerializeField]
-		private InventorySaveData inventorySaveData = new();
+		private ItemContainerSaveData inventorySaveData = new();
 		[SerializeField]
 		private string saveDataJson = string.Empty;
 
@@ -54,7 +54,7 @@ namespace Kryz.RPG.Items.UI
 			else
 			{
 				JsonUtility.FromJsonOverwrite(saveDataJson, inventorySaveData);
-				inventorySaveData.ToInventory(itemFactory, inventory);
+				inventorySaveData.ToItemContainer(itemFactory, inventory);
 			}
 		}
 
