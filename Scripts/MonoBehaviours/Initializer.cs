@@ -11,9 +11,9 @@ namespace Kryz.RPG.Items.UI
 		private readonly Inventory cursorInventory = new(1);
 
 		[SerializeField]
-		private InventoryView? inventoryView;
+		private ItemContainerView? inventoryView;
 		[SerializeField]
-		private InventoryView? cursorInventoryView;
+		private ItemContainerView? cursorInventoryView;
 		[SerializeField]
 		private BaseItemDefinition[] itemDefinitions = Array.Empty<BaseItemDefinition>();
 		[SerializeField]

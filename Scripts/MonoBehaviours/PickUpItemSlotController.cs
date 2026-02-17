@@ -75,7 +75,7 @@ namespace Kryz.RPG.Items.UI
 			if (!ValidateSlot(dragController.CursorSlot, out int cursorIndex, out IItemContainer? cursorContainer))
 				return false;
 
-			// if (!ValidateSlot(dragController.SourceSlot, out int sourceIndex, out IItemContainer? sourceInventory))
+			// if (!ValidateSlot(dragController.SourceSlot, out int sourceIndex, out IItemContainer? sourceContainer))
 			// 	return false;
 
 			return cursorContainer.TryMoveSlot(cursorIndex, dropContainer, dropIndex);
