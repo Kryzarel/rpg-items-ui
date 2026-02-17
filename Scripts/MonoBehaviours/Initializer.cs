@@ -7,8 +7,8 @@ namespace Kryz.RPG.Items.UI
 	public class Initializer : MonoBehaviour
 	{
 		private readonly ItemFactory itemFactory = new(new ItemDefinitionDatabaseResources());
-		private readonly Inventory inventory = new(12);
-		private readonly Inventory cursorInventory = new(1);
+		private readonly NewInventory inventory = new(12);
+		private readonly NewInventory cursorInventory = new(1);
 
 		[SerializeField]
 		private InventoryView? inventoryView;
@@ -41,15 +41,17 @@ namespace Kryz.RPG.Items.UI
 
 		private void Start()
 		{
-			inventoryView!.SetInventory(inventory);
-			cursorInventoryView!.SetInventory(cursorInventory);
+			inventoryView!.SetItemContainer(inventory);
+			cursorInventoryView!.SetItemContainer(cursorInventory);
 
 			if (string.IsNullOrEmpty(saveDataJson))
 			{
+				using ItemTransaction transaction = new(inventory);
 				for (int i = 0; i < itemDefinitions.Length; i++)
 				{
-					inventory.TrySwap(i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]), out _);
+					inventory.SetSlot(transaction, i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]));
 				}
+				transaction.Commit();
 			}
 			else
 			{
@@ -60,7 +62,7 @@ namespace Kryz.RPG.Items.UI
 
 		private void OnDisable()
 		{
-			inventorySaveData.FromItems(itemFactory, inventory.AsSpan());
+			inventorySaveData.FromItems(itemFactory, inventory.Slots);
 			Debug.Log(JsonUtility.ToJson(inventorySaveData));
 		}
 	}

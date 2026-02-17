@@ -66,19 +66,19 @@ namespace Kryz.RPG.Items.UI
 
 		protected override bool TryDrop(IItemSlotView itemSlotView)
 		{
-			if (!ValidateSlot(itemSlotView, out int dropIndex, out IInventory? dropInventory))
+			if (!ValidateSlot(itemSlotView, out int dropIndex, out IItemContainer? dropContainer))
 				return false;
 
 			if (dragController == null || dragController.CursorSlot == null /* || dragController.SourceSlot == null */)
 				return false;
 
-			if (!ValidateSlot(dragController.CursorSlot, out int cursorIndex, out IInventory? cursorInventory))
+			if (!ValidateSlot(dragController.CursorSlot, out int cursorIndex, out IItemContainer? cursorContainer))
 				return false;
 
-			// if (!ValidateSlot(dragController.SourceSlot, out int sourceIndex, out IInventory? sourceInventory))
+			// if (!ValidateSlot(dragController.SourceSlot, out int sourceIndex, out IItemContainer? sourceInventory))
 			// 	return false;
 
-			return dropInventory.TryMove(dropIndex, cursorInventory, cursorIndex, allowSwap: true);
+			return cursorContainer.TryMoveSlot(cursorIndex, dropContainer, dropIndex);
 		}
 
 		private bool HandleItemPickup(IItemSlotView itemSlotView)
@@ -95,12 +95,12 @@ namespace Kryz.RPG.Items.UI
 			{
 				ItemStack dragAfter = dragController.CursorSlot?.ItemStack ?? default;
 				ItemStack dropAfter = itemSlotView.ItemStack;
-				bool notEmpty = dragBefore != default && dragAfter != default;
-				bool swapped = notEmpty && dragBefore == dropAfter && dropBefore == dragAfter;
+				bool empty = dragBefore == default || dragAfter == default;
+				bool swapped = dragBefore == dropAfter && dropBefore == dragAfter;
 
 				EndDrag();
 
-				if (swapped)
+				if (swapped && !empty)
 				{
 					StartDrag(itemSlotView, itemSlotView.ItemStack.Count);
 				}
