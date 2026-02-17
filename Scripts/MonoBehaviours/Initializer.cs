@@ -51,7 +51,7 @@ namespace Kryz.RPG.Items.UI
 				{
 					inventory.SetSlot(transaction, i, new ItemStack(itemFactory.Create(itemDefinitions[i]), itemCounts[i]));
 				}
-				transaction.Commit();
+				transaction.SetResult(true);
 			}
 			else
 			{
