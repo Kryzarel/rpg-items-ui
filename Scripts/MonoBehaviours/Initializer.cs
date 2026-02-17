@@ -7,8 +7,8 @@ namespace Kryz.RPG.Items.UI
 	public class Initializer : MonoBehaviour
 	{
 		private readonly ItemFactory itemFactory = new(new ItemDefinitionDatabaseResources());
-		private readonly NewInventory inventory = new(12);
-		private readonly NewInventory cursorInventory = new(1);
+		private readonly Inventory inventory = new(12);
+		private readonly Inventory cursorInventory = new(1);
 
 		[SerializeField]
 		private InventoryView? inventoryView;
