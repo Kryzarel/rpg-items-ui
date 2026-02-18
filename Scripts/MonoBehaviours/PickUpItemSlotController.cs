@@ -58,7 +58,7 @@ namespace Kryz.RPG.Items.UI
 			}
 			else if (splitStackAction != null && splitStackAction.action.WasPerformedThisFrame())
 			{
-				return StartDrag(itemSlotView, itemSlotView.ItemStack.Count / 2);
+				return StartDrag(itemSlotView, itemSlotView.VisualItemStack.Count / 2);
 			}
 
 			return base.OnPointerClick(itemSlotView, eventData);
@@ -88,13 +88,13 @@ namespace Kryz.RPG.Items.UI
 				return false;
 			}
 
-			ItemStack dragBefore = dragController.CursorSlot?.ItemStack ?? default;
-			ItemStack dropBefore = itemSlotView.ItemStack;
+			ItemStack dragBefore = dragController.CursorSlot?.VisualItemStack ?? default;
+			ItemStack dropBefore = itemSlotView.VisualItemStack;
 
 			if (TryDrop(itemSlotView))
 			{
-				ItemStack dragAfter = dragController.CursorSlot?.ItemStack ?? default;
-				ItemStack dropAfter = itemSlotView.ItemStack;
+				ItemStack dragAfter = dragController.CursorSlot?.VisualItemStack ?? default;
+				ItemStack dropAfter = itemSlotView.VisualItemStack;
 				bool empty = dragBefore == default || dragAfter == default;
 				bool swapped = dragBefore == dropAfter && dropBefore == dragAfter;
 
@@ -102,12 +102,12 @@ namespace Kryz.RPG.Items.UI
 
 				if (swapped && !empty)
 				{
-					StartDrag(itemSlotView, itemSlotView.ItemStack.Count);
+					StartDrag(itemSlotView, itemSlotView.VisualItemStack.Count);
 				}
 				return true;
 			}
 
-			return StartDrag(itemSlotView, itemSlotView.ItemStack.Count);
+			return StartDrag(itemSlotView, itemSlotView.VisualItemStack.Count);
 		}
 	}
 }
