@@ -305,6 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Kryz.RPG.Items.Views::Kryz.RPG.Items.Views.ItemDragManager
   canvas: {fileID: 1003012368}
   cursorSlot: {fileID: 1871925441}
+  copySourceSlotSize: 1
 --- !u!114 &73720770
 MonoBehaviour:
   m_ObjectHideFlags: 0

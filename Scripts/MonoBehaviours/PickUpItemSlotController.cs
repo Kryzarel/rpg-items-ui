@@ -64,23 +64,6 @@ namespace Kryz.RPG.Items.UI
 			return base.OnPointerClick(itemSlotView, eventData);
 		}
 
-		protected override bool TryDrop(IItemSlotView itemSlotView)
-		{
-			if (!ValidateSlot(itemSlotView, out int dropIndex, out IItemContainer? dropContainer))
-				return false;
-
-			if (dragController == null || dragController.CursorSlot == null /* || dragController.SourceSlot == null */)
-				return false;
-
-			if (!ValidateSlot(dragController.CursorSlot, out int cursorIndex, out IItemContainer? cursorContainer))
-				return false;
-
-			// if (!ValidateSlot(dragController.SourceSlot, out int sourceIndex, out IItemContainer? sourceContainer))
-			// 	return false;
-
-			return cursorContainer.TryMoveSlot(cursorIndex, dropContainer, dropIndex);
-		}
-
 		private bool HandleItemPickup(IItemSlotView itemSlotView)
 		{
 			if (dragController == null || pickUpAction == null || !pickUpAction.action.WasPerformedThisFrame())
@@ -88,13 +71,19 @@ namespace Kryz.RPG.Items.UI
 				return false;
 			}
 
-			ItemStack dragBefore = dragController.CursorSlot?.VisualItemStack ?? default;
-			ItemStack dropBefore = itemSlotView.VisualItemStack;
+			if (itemSlotView == dragController.SourceSlot)
+			{
+				EndDrag();
+				return true;
+			}
+
+			ItemStack dragBefore = dragController.SourceSlot?.RealItemStack ?? default;
+			ItemStack dropBefore = itemSlotView.RealItemStack;
 
 			if (TryDrop(itemSlotView))
 			{
-				ItemStack dragAfter = dragController.CursorSlot?.VisualItemStack ?? default;
-				ItemStack dropAfter = itemSlotView.VisualItemStack;
+				ItemStack dragAfter = dragController.SourceSlot?.RealItemStack ?? default;
+				ItemStack dropAfter = itemSlotView.RealItemStack;
 				bool empty = dragBefore == default || dragAfter == default;
 				bool swapped = dragBefore == dropAfter && dropBefore == dragAfter;
 
