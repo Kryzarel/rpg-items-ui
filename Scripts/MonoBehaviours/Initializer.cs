@@ -62,7 +62,7 @@ namespace Kryz.RPG.Items.UI
 
 		private void OnDisable()
 		{
-			inventorySaveData.FromItems(itemFactory, inventory.Slots);
+			inventorySaveData.FromItemContainer(itemFactory, inventory);
 			Debug.Log(JsonUtility.ToJson(inventorySaveData));
 		}
 	}
