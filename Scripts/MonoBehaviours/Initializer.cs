@@ -11,9 +11,9 @@ namespace Kryz.RPG.Items.UI
 		private readonly Inventory cursorInventory = new(1);
 
 		[SerializeField]
-		private ItemContainerView? inventoryView;
+		private ItemContainerView inventoryView;
 		[SerializeField]
-		private ItemContainerView? cursorInventoryView;
+		private ItemContainerView cursorInventoryView;
 		[SerializeField]
 		private BaseItemDefinition[] itemDefinitions = Array.Empty<BaseItemDefinition>();
 		[SerializeField]
@@ -41,8 +41,8 @@ namespace Kryz.RPG.Items.UI
 
 		private void Start()
 		{
-			inventoryView!.SetItemContainer(inventory);
-			cursorInventoryView!.SetItemContainer(cursorInventory);
+			inventoryView.SetItemContainer(inventory);
+			cursorInventoryView.SetItemContainer(cursorInventory);
 
 			if (string.IsNullOrEmpty(saveDataJson))
 			{

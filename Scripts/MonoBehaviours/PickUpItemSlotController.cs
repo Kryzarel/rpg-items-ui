@@ -7,8 +7,8 @@ namespace Kryz.RPG.Items.UI
 {
 	public sealed class PickUpItemSlotController : ItemSlotController
 	{
-		[SerializeField] InputActionReference? pickUpAction;
-		[SerializeField] InputActionReference? cancelPickUpAction;
+		[SerializeField] InputActionReference pickUpAction;
+		[SerializeField] InputActionReference cancelPickUpAction;
 
 		private void Start()
 		{

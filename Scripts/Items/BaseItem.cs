@@ -6,7 +6,7 @@ namespace Kryz.RPG.Items.UI
 	{
 		public readonly BaseItemDefinition Definition;
 
-		public virtual Sprite Icon => Definition.Icon!;
+		public virtual Sprite Icon => Definition.Icon;
 		public virtual string Name => Definition.Name;
 		public virtual string Description => Definition.Description;
 		public virtual int MaxStacks => 1;
